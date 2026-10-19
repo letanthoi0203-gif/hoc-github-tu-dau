@@ -4,75 +4,291 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website đầu tiên của tôi</title>
+  <meta name="description" content="Sữa hạt Anh Đầu Bếp - sữa hạt chai 330ml, 20.000đ/chai tại Dương Đông, Phú Quốc.">
+  <title>Sữa hạt Anh Đầu Bếp | 20K/chai</title>
 
   <style>
+    :root {
+      --cream: #f7f3e9;
+      --olive: #596447;
+      --dark: #293328;
+      --brown: #8a7256;
+      --white: #fffefa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f0f7f4;
-      color: #243b32;
-      text-align: center;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.6;
     }
 
     header {
-      background: #176b50;
+      background: var(--olive);
       color: white;
-      padding: 45px 20px;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
-    h1 {
-      font-size: 32px;
+    .brand {
+      font-size: 21px;
+      font-weight: bold;
     }
 
-    main {
-      padding: 35px 20px;
-    }
-
-    .card {
-      max-width: 500px;
-      margin: auto;
-      padding: 25px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 15px #00000012;
-    }
-
-    button {
-      background: #176b50;
+    nav a {
       color: white;
-      padding: 12px 22px;
-      border: none;
+      text-decoration: none;
+      margin-left: 16px;
+    }
+
+    .hero {
+      padding: 58px 20px;
+      text-align: center;
+      background: #e9e5d5;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      margin: 0 0 12px;
+    }
+
+    .hero p {
+      max-width: 560px;
+      margin: 0 auto 22px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--olive);
+      color: white;
+      padding: 12px 20px;
       border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+    }
+
+    .button:hover {
+      opacity: 0.88;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 42px 20px;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 28px;
+      margin: 0 0 8px;
+    }
+
+    .intro {
+      text-align: center;
+      margin: 0 auto 28px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+
+    .product {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px #29332810;
+    }
+
+    .product img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+      background: #e9e5d5;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+    }
+
+    .price {
+      color: var(--olive);
+      font-size: 23px;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+
+    .size {
+      color: #706b60;
+      font-size: 14px;
+    }
+
+    .product .button {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .contact {
+      background: #e9e5d5;
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 8px 0;
+    }
+
+    .contact .button {
+      margin: 10px 5px 0;
     }
 
     footer {
-      padding: 20px;
-      color: #52675d;
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 22px 16px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 520px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        padding: 42px 18px;
+      }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Xin chào! 👋</h1>
-    <p>Chào mừng đến website đầu tiên của tôi.</p>
+    <div class="brand">🌿 Anh Đầu Bếp</div>
+    <nav>
+      <a href="#san-pham">Sản phẩm</a>
+      <a href="#lien-he">Liên hệ</a>
+    </nav>
   </header>
 
+  <section class="hero">
+    <h1>Sữa hạt Anh Đầu Bếp</h1>
+    <p>
+      Từng chai sữa hạt cho buổi sáng của bạn.
+      Chọn vị yêu thích và nhắn đặt hàng ngay!
+    </p>
+    <p><strong>330ml · Đồng giá 20.000đ/chai</strong></p>
+    <a class="button" href="#san-pham">Khám phá menu</a>
+  </section>
+
   <main>
-    <div class="card">
-      <h2>Tôi đang học HTML</h2>
-      <p>Tôi vừa tạo trang web đầu tiên bằng GitHub.</p>
-      <button onclick="alert('Bạn đã tạo website thành công!')">
-        Bấm thử nhé
-      </button>
-    </div>
+    <section class="section" id="san-pham">
+      <h2>Menu sữa hạt</h2>
+      <p class="intro">
+        Chọn hương vị bạn yêu thích.
+        Giá áp dụng cho chai 330ml.
+      </p>
+
+      <div class="products">
+        <article class="product">
+          <img src="chai-sua-hat.jpg"
+               alt="Sữa hạt óc chó, hạnh nhân và yến mạch">
+          <div class="product-info">
+            <h3>Óc chó · Hạnh nhân · Yến mạch</h3>
+            <p class="size">Chai 330ml</p>
+            <p class="price">20.000đ</p>
+            <a class="button"
+               href="https://zalo.me/0336682173"
+               target="_blank" rel="noopener">
+              Đặt vị này
+            </a>
+          </div>
+        </article>
+
+        <article class="product">
+          <img src="chai-sua-hat.jpg"
+               alt="Sữa hạt hạnh nhân">
+          <div class="product-info">
+            <h3>Sữa hạt hạnh nhân</h3>
+            <p class="size">Chai 330ml</p>
+            <p class="price">20.000đ</p>
+            <a class="button"
+               href="https://zalo.me/0336682173"
+               target="_blank" rel="noopener">
+              Đặt vị này
+            </a>
+          </div>
+        </article>
+
+        <article class="product">
+          <img src="chai-sua-hat.jpg"
+               alt="Sữa hạt óc chó">
+          <div class="product-info">
+            <h3>Sữa hạt óc chó</h3>
+            <p class="size">Chai 330ml</p>
+            <p class="price">20.000đ</p>
+            <a class="button"
+               href="https://zalo.me/0336682173"
+               target="_blank" rel="noopener">
+              Đặt vị này
+            </a>
+          </div>
+        </article>
+
+        <article class="product">
+          <img src="chai-sua-hat.jpg"
+               alt="Sữa hạt điều">
+          <div class="product-info">
+            <h3>Sữa hạt điều</h3>
+            <p class="size">Chai 330ml</p>
+            <p class="price">20.000đ</p>
+            <a class="button"
+               href="https://zalo.me/0336682173"
+               target="_blank" rel="noopener">
+              Đặt vị này
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="lien-he">
+      <h2>Đặt sữa ngay hôm nay</h2>
+      <p><strong>Sữa hạt Anh Đầu Bếp</strong></p>
+      <p>📍 Dương Đông, Phú Quốc</p>
+      <p>📞 033 668 2173</p>
+      <p>🥛 Chai 330ml · Đồng giá 20.000đ</p>
+      <a class="button" href="tel:0336682173">Gọi đặt hàng</a>
+      <a class="button" href="https://zalo.me/0336682173"
+         target="_blank" rel="noopener">Nhắn Zalo</a>
+    </section>
   </main>
 
   <footer>
-    Website được xây dựng bằng HTML và CSS.
+    © Sữa hạt Anh Đầu Bếp · Dương Đông, Phú Quốc
   </footer>
 </body>
 </html>
+
